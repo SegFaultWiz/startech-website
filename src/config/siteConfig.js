@@ -60,7 +60,7 @@ const siteConfig = {
           title: "联系我们",
           subtitle: "有任何问题？欢迎随时咨询",
           email: "contact@xingchen.tech",
-          phone: "+86 138 0000 1234",
+          phone: "+86 138 0000 0000",
           address: "上海市浦东新区科技大道123号"
         }
       }
