@@ -1,25 +1,24 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home.jsx';
-import Header from './components/Header.jsx';
-import Footer from './components/Footer.jsx';
+// App.jsx
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import HomePage from './pages/Home.jsx'; // 你的首页
+import ProductsPage from './pages/ProductsPage.jsx';
+import AboutPage from './pages/AboutPage.jsx';
+import ContactPage from './pages/ContactPage.jsx';
 
-import AdminLayout from './pages/admin/AdminLayout.jsx';
-// import AdminLogin from './pages/admin/Login.jsx';
 function App() {
   return (
-    <BrowserRouter>
-      <div className="flex flex-col min-h-screen bg-white">
-        <Header />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            {/* <Route path="/admin/login" element={<AdminLogin />} /> */}
-            <Route path="/admin/*" element={<AdminLayout />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </BrowserRouter>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/products" element={<ProductsPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 

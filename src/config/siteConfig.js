@@ -48,8 +48,8 @@ const siteConfig = {
         data: {
           title: "核心团队",
           members: [
-            { name: "张伟", role: "CEO", avatar: "/avatar1.png" },
-            { name: "李娜", role: "CTO", avatar: "/avatar2.png" },
+            { name: "马岱", role: "CEO", avatar: "/avatar1.png" },
+            { name: "马超", role: "CTO", avatar: "/avatar2.png" },
             { name: "马斯克", role: "CFO", avatar: "/avatar2.png" }
           ]
         }
@@ -59,9 +59,9 @@ const siteConfig = {
         data: {
           title: "联系我们",
           subtitle: "有任何问题？欢迎随时咨询",
-          email: "contact@xingchen.tech",
-          phone: "+86 138 0000 0000",
-          address: "上海市浦东新区科技大道123号"
+          email: "lizj12358@gmail.com",
+          phone: "+86 138 **** ****",
+          address: "广州市市越秀区天河路45号"
         }
       }
     ]

@@ -9,11 +9,12 @@ export default function Header() {
   const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+ 
   const navItems = [
     { key: 'nav.home', path: '/' },
-    { key: 'nav.features', path: '/#features' },
-    { key: 'nav.team', path: '/#team' },
-    { key: 'nav.contact', path: '/#contact' },
+    { key: 'nav.products', path: '/products' },    // ✅ 真实页面
+    { key: 'nav.about', path: '/about' },          // ✅
+    { key: 'nav.contact', path: '/contact' }       // ✅
   ];
 
 

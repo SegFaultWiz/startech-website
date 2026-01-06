@@ -1,8 +1,13 @@
+
+
+import { useTranslation } from 'react-i18next';
 export default function TeamSection({ data }) {
+ 
+  const { t, i18n } = useTranslation();
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">{data.title}</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">{t('team.title')}</h2>
         <div className="flex flex-wrap justify-center gap-8">
           {data.members.map((member, i) => (
             <div key={i} className="text-center max-w-xs">
