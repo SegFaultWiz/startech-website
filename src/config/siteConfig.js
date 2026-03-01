@@ -4,6 +4,8 @@ const siteConfig = {
   logo: "/logo-placeholder.png",
   navigation: [
     { label: "首页", path: "/" },
+    { label: "案例", path: "/cases" },
+    { label: "服务", path: "/services" },
     { label: "产品", path: "/products" },
     { label: "关于我们", path: "/about" },
     { label: "联系我们", path: "/contact" }
@@ -19,6 +21,10 @@ const siteConfig = {
           ctaLink: "/contact",
           backgroundImage: "/hero-bg.jpg"
         }
+      },
+      {
+        type: "cases",
+        data: { limit: 4 }
       },
       {
         type: "features",

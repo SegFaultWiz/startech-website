@@ -1,5 +1,5 @@
 import siteConfig from '../config/siteConfig.js';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher.jsx'
 import { useState } from 'react';
@@ -12,9 +12,11 @@ export default function Header() {
  
   const navItems = [
     { key: 'nav.home', path: '/' },
-    { key: 'nav.products', path: '/products' },    // ✅ 真实页面
-    { key: 'nav.about', path: '/about' },          // ✅
-    { key: 'nav.contact', path: '/contact' }       // ✅
+    { key: 'nav.cases', path: '/cases' },
+    { key: 'nav.services', path: '/services' },
+    { key: 'nav.products', path: '/products' },
+    { key: 'nav.about', path: '/about' },
+    { key: 'nav.contact', path: '/contact' }
   ];
 
 
@@ -29,13 +31,16 @@ export default function Header() {
         </Link>
         <nav className="hidden md:flex space-x-6">
           {navItems.map((item) => (
-            <Link
+            <NavLink
               key={item.key}
               to={item.path}
-              className='text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors'
+              end={item.path === '/'}
+              className={({ isActive }) =>
+                `transition-colors ${isActive ? 'text-blue-600 dark:text-blue-400 font-medium' : 'text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400'}`
+              }
             >
               {t(item.key)}
-            </Link>
+            </NavLink>
           ))}
         </nav>
         {/* 语言切换器 */}
@@ -69,14 +74,17 @@ export default function Header() {
         <div className="md:hidden bg-white dark:bg-gray-800 shadow-lg transition-opacity duration-300 ease-in-out opacity-100" style={{ animation: 'none' }}>
           <div className="container mx-auto px-4 py-6 flex flex-col space-y-5">
             {navItems.map((item) => (
-              <Link
+              <NavLink
                 key={item.key}
                 to={item.path}
-                className="text-lg text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                onClick={() => setIsMenuOpen(false)} // 点击后关闭菜单
+                end={item.path === '/'}
+                className={({ isActive }) =>
+                  `text-lg block transition-colors ${isActive ? 'text-blue-600 dark:text-blue-400 font-medium' : 'text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400'}`
+                }
+                onClick={() => setIsMenuOpen(false)}
               >
                 {t(item.key)}
-              </Link>
+              </NavLink>
             ))}
 
             {/* Mobile: Language + Theme */}

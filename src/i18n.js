@@ -47,6 +47,31 @@ const resources = {
       "contact.message": "Your Message",
       "contact.send": "Send Message",
 
+      "nav.cases": "Cases",
+      "nav.services": "Services",
+      "cases.title": "Development Cases",
+      "cases.subtitle": "Past projects including websites, mini-programs, dashboards and more.",
+      "cases.sectionTitle": "Featured Cases",
+      "cases.sectionSubtitle": "Selected works from past development projects.",
+      "cases.viewAll": "View All",
+      "cases.empty": "No cases in this category yet.",
+      "cases.ctaText": "Need a similar project? Let's talk.",
+      "cases.ctaButton": "Contact Me",
+
+      "services.title": "Services",
+      "services.subtitle": "Full-stack development services for web, mobile and mini-programs.",
+      "services.website.title": "Website Development",
+      "services.website.desc": "Corporate sites, landing pages, marketing sites. Responsive, SEO-friendly, multi-language support.",
+      "services.miniprogram.title": "WeChat Mini Program",
+      "services.miniprogram.desc": "E-commerce, tools, content platforms. Native performance with WeChat ecosystem integration.",
+      "services.admin.title": "Admin Panel / Management System",
+      "services.admin.desc": "Back-office systems, dashboards, data management. Built with React, Vue, Ant Design, etc.",
+      "services.data.title": "Data Visualization",
+      "services.data.desc": "Charts, dashboards, big-screen displays. ECharts, D3, real-time data.",
+      "services.viewCases": "View cases",
+      "services.processTitle": "How we work",
+      "services.processDesc": "Consultation → Quote → Development → Delivery. Clear communication and on-time delivery.",
+      "services.cta": "Get a Quote"
 
     }
   },
@@ -84,7 +109,33 @@ const resources = {
       "contact.name": "您的姓名",
       "contact.email": "您的邮箱",
       "contact.message": "您的留言",
-      "contact.send": "发送消息"
+      "contact.send": "发送消息",
+
+      "nav.cases": "案例",
+      "nav.services": "服务",
+      "cases.title": "开发案例",
+      "cases.subtitle": "过往项目展示，包括网站建站、小程序、数据大屏等。",
+      "cases.sectionTitle": "精选案例",
+      "cases.sectionSubtitle": "部分过往开发项目展示。",
+      "cases.viewAll": "查看全部",
+      "cases.empty": "该分类下暂无案例。",
+      "cases.ctaText": "有类似需求？欢迎联系。",
+      "cases.ctaButton": "联系我",
+
+      "services.title": "服务范围",
+      "services.subtitle": "提供网站、小程序、后台系统等全栈开发服务。",
+      "services.website.title": "网站建站",
+      "services.website.desc": "企业官网、落地页、营销站。响应式、SEO 友好、多语言支持。",
+      "services.miniprogram.title": "微信小程序",
+      "services.miniprogram.desc": "电商、工具、内容平台。原生体验，对接微信生态。",
+      "services.admin.title": "管理系统 / 后台",
+      "services.admin.desc": "后台系统、数据看板、业务管理。React、Vue、Ant Design 等技术栈。",
+      "services.data.title": "数据可视化",
+      "services.data.desc": "图表、看板、大屏展示。ECharts、D3，支持实时数据。",
+      "services.viewCases": "查看案例",
+      "services.processTitle": "合作流程",
+      "services.processDesc": "需求沟通 → 报价确认 → 开发交付 → 售后支持。沟通透明，按时交付。",
+      "services.cta": "获取报价"
     }
   }
 };
