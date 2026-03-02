@@ -6,7 +6,7 @@ const __filename = VPV_fileURLToPath(import.meta.url);
 const __dirname = VPV_dirname(__filename);
 
 
-// api/contact.js
+// _api/contact.js
 import { createRequire } from "module";
 var require2 = createRequire(import.meta.url);
 var nodemailer = require2("nodemailer");
@@ -30,19 +30,21 @@ async function handler(req, res) {
     console.error("Missing SMTP configuration");
     return res.status(500).json({ message: "\u670D\u52A1\u5668\u90AE\u4EF6\u914D\u7F6E\u9519\u8BEF\uFF0C\u8BF7\u7A0D\u540E\u91CD\u8BD5" });
   }
+  const to = process.env.CONTACT_TO || process.env.SMTP_USER;
+  const from = process.env.SMTP_FROM || process.env.SMTP_USER;
   try {
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT || 465),
-      secure: process.env.SMTP_SECURE !== "false",
+      secure: String(process.env.SMTP_SECURE || "true") !== "false",
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS
       }
     });
     await transporter.sendMail({
-      from: `"\u7F51\u7AD9\u8054\u7CFB\u8868\u5355" <${process.env.SMTP_FROM || process.env.SMTP_USER}>`,
-      to: process.env.CONTACT_TO || process.env.SMTP_USER,
+      from,
+      to,
       replyTo: email,
       subject: `\u6765\u81EA ${name} \u7684\u7F51\u7AD9\u7559\u8A00`,
       text: `\u59D3\u540D: ${name}
@@ -57,8 +59,8 @@ ${message}`,
     });
     return res.status(200).json({ ok: true });
   } catch (err) {
-    console.error("Error sending email", err);
-    return res.status(500).json({ message: "\u53D1\u9001\u5931\u8D25\uFF0C\u8BF7\u7A0D\u540E\u91CD\u8BD5" });
+    console.error("Error sending email", err?.message || err);
+    return res.status(500).json({ message: err?.message || "\u53D1\u9001\u5931\u8D25\uFF0C\u8BF7\u7A0D\u540E\u91CD\u8BD5" });
   }
 }
 export {
