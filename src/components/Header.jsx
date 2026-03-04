@@ -24,9 +24,9 @@ export default function Header() {
     i18n.changeLanguage(lng);
   };
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-white dark:bg-slate-900 shadow-sm sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Link to="/" className="text-xl font-bold text-blue-600">
+        <Link to="/" className="text-xl font-bold text-cyan-600 dark:text-cyan-400">
           StarTech
         </Link>
         <nav className="hidden md:flex space-x-6">
@@ -36,7 +36,7 @@ export default function Header() {
               to={item.path}
               end={item.path === '/'}
               className={({ isActive }) =>
-                `transition-colors ${isActive ? 'text-blue-600 dark:text-blue-400 font-medium' : 'text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400'}`
+                `transition-colors ${isActive ? 'text-cyan-600 dark:text-cyan-400 font-medium' : 'text-slate-700 hover:text-cyan-600 dark:text-slate-300 dark:hover:text-cyan-400'}`
               }
             >
               {t(item.key)}
@@ -51,7 +51,7 @@ export default function Header() {
         {/* Mobile: Hamburger Button */}
 
         <button
-          className="md:hidden text-gray-700 dark:text-gray-300 focus:outline-none"
+          className="md:hidden text-slate-700 dark:text-slate-300 focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -71,7 +71,7 @@ export default function Header() {
 
       {/* Mobile Menu (Drawer) */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-800 shadow-lg transition-opacity duration-300 ease-in-out opacity-100" style={{ animation: 'none' }}>
+        <div className="md:hidden bg-white dark:bg-slate-800 shadow-lg transition-opacity duration-300 ease-in-out opacity-100" style={{ animation: 'none' }}>
           <div className="container mx-auto px-4 py-6 flex flex-col space-y-5">
             {navItems.map((item) => (
               <NavLink
@@ -79,7 +79,7 @@ export default function Header() {
                 to={item.path}
                 end={item.path === '/'}
                 className={({ isActive }) =>
-                  `text-lg block transition-colors ${isActive ? 'text-blue-600 dark:text-blue-400 font-medium' : 'text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400'}`
+                  `text-lg block transition-colors ${isActive ? 'text-cyan-600 dark:text-cyan-400 font-medium' : 'text-slate-800 dark:text-slate-200 hover:text-cyan-600 dark:hover:text-cyan-400'}`
                 }
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -88,13 +88,13 @@ export default function Header() {
             ))}
 
             {/* Mobile: Language + Theme */}
-            <div className="pt-4 border-t border-gray-200 dark:border-gray-700 flex flex-col space-y-4">
+            <div className="pt-4 border-t border-slate-200 dark:border-slate-700 flex flex-col space-y-4">
               <div className="flex justify-between items-center">
-                <span className="text-sm text-gray-500 dark:text-gray-400">{t('language.switch')}</span>
+                <span className="text-sm text-slate-500 dark:text-slate-400">{t('language.switch')}</span>
                 <LanguageSwitcher />
               </div>
               <div className="flex justify-between items-center">
-                <span className="text-sm text-gray-500 dark:text-gray-400">主题</span>
+                <span className="text-sm text-slate-500 dark:text-slate-400">主题</span>
                 <ThemeSwitcher />
               </div>
             </div>

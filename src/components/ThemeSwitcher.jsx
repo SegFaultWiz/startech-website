@@ -8,13 +8,13 @@ export default function ThemeSwitcher() {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+      className="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
       aria-label={theme === 'dark' ? '切换到亮色模式' : '切换到暗色模式'}
     >
       {theme === 'dark' ? (
         <FaSun className="text-yellow-400" />
       ) : (
-        <FaMoon className="text-gray-700" />
+        <FaMoon className="text-slate-600 dark:text-slate-400" />
       )}
     </button>
   );

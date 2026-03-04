@@ -10,8 +10,8 @@ export default function ServicesPage() {
     {
       icon: FaGlobe,
       key: 'website',
-      color: 'from-blue-500 to-cyan-500',
-      bgColor: 'bg-blue-50 dark:bg-blue-900/20'
+      color: 'from-cyan-500 to-blue-500',
+      bgColor: 'bg-cyan-50 dark:bg-cyan-900/20'
     },
     {
       icon: FaMobileAlt,
@@ -40,13 +40,13 @@ export default function ServicesPage() {
         description={t('services.subtitle')}
         keywords="网站建站,小程序,外包,全栈开发,管理系统"
       />
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-16 px-4">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-900 py-16 px-4">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
             {t('services.title')}
           </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
             {t('services.subtitle')}
           </p>
         </div>
@@ -61,15 +61,15 @@ export default function ServicesPage() {
                 <s.icon className="w-8 h-8 text-white" />
               </div>
               <div className="flex-1">
-                <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                <h2 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
                   {t(`services.${s.key}.title`)}
                 </h2>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                <p className="text-slate-600 dark:text-slate-400 mb-4">
                   {t(`services.${s.key}.desc`)}
                 </p>
                 <Link
                   to="/cases"
-                  className="text-blue-600 dark:text-blue-400 font-medium hover:underline"
+                  className="text-cyan-600 dark:text-cyan-400 font-medium hover:underline"
                 >
                   {t('services.viewCases')} →
                 </Link>
@@ -78,16 +78,16 @@ export default function ServicesPage() {
           ))}
         </div>
 
-        <div className="mt-16 p-8 bg-white dark:bg-gray-800 rounded-xl text-center">
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+        <div className="mt-16 p-8 bg-white dark:bg-slate-800 rounded-xl text-center">
+          <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">
             {t('services.processTitle')}
           </h3>
-          <p className="text-gray-600 dark:text-gray-400 mb-6">
+          <p className="text-slate-600 dark:text-slate-400 mb-6">
             {t('services.processDesc')}
           </p>
           <Link
             to="/contact"
-            className="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
+            className="inline-block px-8 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors"
           >
             {t('services.cta')}
           </Link>

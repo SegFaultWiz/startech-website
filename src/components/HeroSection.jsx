@@ -14,10 +14,10 @@ export default function HeroSection({ data }) {
     >
       <div className="px-4 max-w-4xl">
         <h1 className="text-4xl md:text-6xl font-bold mb-6">{t('hero.title')}</h1>
-        <p className="text-xl text-gray-600 dark:text-gray-300 mt-4 mb-6">{t('hero.subtitle')}</p>
+        <p className="text-xl text-slate-200 mt-4 mb-6">{t('hero.subtitle')}</p>
         <a
           href={data.ctaLink}
-          className="inline-block bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg text-lg font-semibold transition"
+          className="inline-block bg-cyan-500 hover:bg-cyan-600 px-8 py-3 rounded-lg text-lg font-semibold transition"
         >
           {data.ctaText}
         </a>

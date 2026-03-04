@@ -24,13 +24,13 @@ export default function CasesPage() {
         description={t('cases.subtitle')}
         keywords="开发案例,网站建站,小程序,外包项目"
       />
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12 px-4">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-900 py-12 px-4">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
             {t('cases.title')}
           </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
             {t('cases.subtitle')}
           </p>
         </div>
@@ -43,8 +43,8 @@ export default function CasesPage() {
               onClick={() => setFilter(f.key)}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                 filter === f.key
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+                  ? 'bg-cyan-600 text-white'
+                  : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700'
               }`}
             >
               {f.label[lng]}
@@ -60,17 +60,17 @@ export default function CasesPage() {
         </div>
 
         {filteredCases.length === 0 && (
-          <div className="text-center py-16 text-gray-500 dark:text-gray-400">
+          <div className="text-center py-16 text-slate-500 dark:text-slate-400">
             {t('cases.empty')}
           </div>
         )}
 
         {/* CTA */}
         <div className="mt-16 text-center">
-          <p className="text-gray-600 dark:text-gray-400 mb-4">{t('cases.ctaText')}</p>
+          <p className="text-slate-600 dark:text-slate-400 mb-4">{t('cases.ctaText')}</p>
           <Link
             to="/contact"
-            className="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
+            className="inline-block px-8 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors"
           >
             {t('cases.ctaButton')}
           </Link>
