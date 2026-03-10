@@ -12,9 +12,9 @@ export default function ThemeSwitcher() {
       aria-label={theme === 'dark' ? '切换到亮色模式' : '切换到暗色模式'}
     >
       {theme === 'dark' ? (
-        <FaSun className="text-yellow-400" />
+        <FaMoon className="text-slate-200" />
       ) : (
-        <FaMoon className="text-slate-600 dark:text-slate-400" />
+        <FaSun className="text-yellow-400" />
       )}
     </button>
   );
