@@ -25,9 +25,9 @@ export default function ProductsPage() {
           {products.map((product) => (
             <div
               key={product.id}
-              className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all duration-300 hover:shadow-lg dark:hover:shadow-cyan-500/10"
+              className="bg-white/95 dark:bg-slate-900/60 rounded-2xl p-6 border border-slate-200/70 dark:border-slate-700/70 hover:border-cyan-500/80 dark:hover:border-cyan-400/80 transition-all duration-300 hover:shadow-cyan-500/25 hover:-translate-y-1 backdrop-blur"
             >
-              <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mb-4">
+              <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-cyan-700 flex items-center justify-center mb-4 shadow-md shadow-cyan-500/40">
                 <span className="text-xl">🚀</span>
               </div>
               <h3 className="text-xl font-semibold mb-2 text-slate-900 dark:text-white">{product.name}</h3>

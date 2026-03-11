@@ -107,7 +107,7 @@ export default function CaseDetailPage() {
         <div className="mt-8 text-center">
           <Link
             to="/contact"
-            className="inline-block px-8 py-3 bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 text-slate-900 dark:text-white font-medium rounded-lg transition-colors"
+            className="inline-block px-8 py-3 bg-cyan-600 hover:bg-cyan-700 dark:bg-cyan-500 dark:hover:bg-cyan-600 text-white font-medium rounded-lg transition-colors"
           >
             有类似需求？联系我
           </Link>

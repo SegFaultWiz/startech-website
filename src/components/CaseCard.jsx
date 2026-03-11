@@ -17,10 +17,10 @@ export default function CaseCard({ caseItem, compact = false }) {
     : { background: gradient };
 
   return (
-    <div className="group bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-700">
+    <div className="group bg-white/95 dark:bg-slate-900/60 rounded-2xl overflow-hidden shadow-md hover:shadow-cyan-500/25 transition-all duration-300 border border-slate-200/70 dark:border-slate-700/70 hover:border-cyan-500/80 dark:hover:border-cyan-400/80 backdrop-blur">
       <Link to={`/cases/${caseItem.id}`} className="block">
         <div
-          className="h-40 bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
+          className="h-40 bg-cover bg-center transition-transform duration-300 group-hover:scale-105 group-hover:brightness-105"
           style={coverStyle}
         />
         <div className="p-5">
@@ -43,7 +43,7 @@ export default function CaseCard({ caseItem, compact = false }) {
             ))}
           </div>
           {hasLink && (
-            <div className="mt-3 flex items-center gap-1 text-cyan-600 dark:text-cyan-400 text-sm font-medium">
+            <div className="mt-3 flex items-center gap-1 text-cyan-600 dark:text-cyan-400 text-sm font-medium group-hover:translate-x-0.5 transition-transform">
               <FaExternalLinkAlt className="w-3.5 h-3.5" />
               <span>查看演示</span>
             </div>

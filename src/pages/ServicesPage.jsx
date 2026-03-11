@@ -10,26 +10,26 @@ export default function ServicesPage() {
     {
       icon: FaGlobe,
       key: 'website',
-      color: 'from-cyan-500 to-blue-500',
+      color: 'from-cyan-500 to-cyan-700',
       bgColor: 'bg-cyan-50 dark:bg-cyan-900/20'
     },
     {
       icon: FaMobileAlt,
       key: 'miniprogram',
-      color: 'from-green-500 to-emerald-500',
-      bgColor: 'bg-green-50 dark:bg-green-900/20'
+      color: 'from-cyan-500 to-cyan-700',
+      bgColor: 'bg-cyan-50 dark:bg-cyan-900/20'
     },
     {
       icon: FaCog,
       key: 'admin',
-      color: 'from-purple-500 to-pink-500',
-      bgColor: 'bg-purple-50 dark:bg-purple-900/20'
+      color: 'from-cyan-500 to-cyan-700',
+      bgColor: 'bg-cyan-50 dark:bg-cyan-900/20'
     },
     {
       icon: FaChartLine,
       key: 'data',
-      color: 'from-orange-500 to-red-500',
-      bgColor: 'bg-orange-50 dark:bg-orange-900/20'
+      color: 'from-cyan-500 to-cyan-700',
+      bgColor: 'bg-cyan-50 dark:bg-cyan-900/20'
     }
   ];
 

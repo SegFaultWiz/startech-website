@@ -5,8 +5,9 @@ export default function Footer() {
   const contactData = siteConfig.pages.home.find(s => s.type === 'contact')?.data;
 
   return (
-    <footer className="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-10">
+    <footer className="bg-white dark:bg-slate-950 border-t border-slate-200/60 dark:border-slate-800/80 py-10">
       <div className="container mx-auto px-4">
+        <div className="h-px w-full bg-gradient-to-r from-cyan-500/60 via-slate-500/40 to-cyan-500/60 mb-6" />
         <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-6">
           <div className="text-center md:text-left">
             <p className="text-slate-600 dark:text-slate-400">

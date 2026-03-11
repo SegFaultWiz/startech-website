@@ -32,7 +32,10 @@ export default function AboutPage() {
 
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {stats.map((stat, i) => (
-            <div key={i} className="p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700">
+            <div
+              key={i}
+              className="p-5 bg-white/95 dark:bg-slate-900/60 rounded-2xl border border-slate-200/70 dark:border-slate-700/70 backdrop-blur shadow-sm hover:shadow-cyan-500/25 hover:-translate-y-1 transition-all duration-300"
+            >
               <div className="text-3xl font-bold text-cyan-600 dark:text-cyan-400 mb-2">{stat.num}</div>
               <div className="text-slate-600 dark:text-slate-400">{stat.label}</div>
             </div>
