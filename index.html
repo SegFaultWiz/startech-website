@@ -9,6 +9,22 @@
   <meta name="description" content="独立开发者，提供网站建站、微信小程序、管理系统、数据可视化等全栈开发服务。接外包项目。" />
   <meta name="keywords" content="网站建站,小程序,外包,全栈开发,lizhongjie" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <script>
+    (function() {
+      try {
+        const saved = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const shouldDark = saved === 'dark' || (!saved && prefersDark);
+        if (shouldDark) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      } catch (e) {
+        // ignore
+      }
+    })();
+  </script>
 </head>
 
 <body>
