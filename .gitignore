@@ -4,6 +4,7 @@ build/
 .out/
 .nitro/
 .output/
+.vercel/
 
 # Dependencies
 node_modules/
